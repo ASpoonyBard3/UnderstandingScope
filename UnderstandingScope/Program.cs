@@ -22,12 +22,12 @@ namespace UnderstandingScope
                 k = j.ToString();
                 Console.WriteLine(i);
 
-                if (i == 9);
+                /*if (i == 9);
                 {
                     string l = i.ToString();
                 }
-                //Console.WriteLine(l);
-
+                Console.WriteLine(l);
+                */
             }
             //Console.WriteLine(i);
             Console.WriteLine("Out of the for: " + j);
@@ -41,6 +41,18 @@ namespace UnderstandingScope
         static void HelperMethod()
         {
             Console.WriteLine("The value of k, from the helperMethod():" + k);
+        }
+    }
+
+    class Car
+    {
+        public void DoSomething()
+        {
+            Console.WriteLine(helperMethod());
+        }
+        private string helperMethod()
+        {
+            return "Hello world!";
         }
     }
 }
